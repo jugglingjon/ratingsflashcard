@@ -1,0 +1,20 @@
+{
+"main": "index.html",
+"name": "navy-flashcard",
+"description": "demo app of node-webkit",
+"version": "0.1.0",
+"keywords": [ "demo", "node-webkit" ],
+"window": {
+	"title": "Navy Flashcard Training",
+	"icon": "link.png",
+	"toolbar": false,
+	"frame": true,
+	"width": 1024,
+	"height": 768,
+	"position": "center",
+	"resizable": false
+	},
+"webkit": {
+	"plugin": true
+	}
+}

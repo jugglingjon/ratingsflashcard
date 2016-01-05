@@ -1,0 +1,642 @@
+@charset "UTF-8";
+
+/* LESS MIXINS ==========================================
+
+Examples:
+```````````````````````````````````````````
+.gradient(#F5F5F5, #EEE, #FFF); 			
+.bw-gradient(#EEE, 230, 255); 				
+.bordered(#EEE, #E5E5E5, #DDD, #E5E5E5); 	
+.drop-shadow(0, 1px, 2px, 0.2); 			
+.rounded(5px); 								
+.border-radius(5px, 0, 0, 5px); 			
+.opacity(0.8); 								
+.transition-duration(0.2s); 				
+.rotation(15deg); 							
+.scale(2); 									
+.transition(2s, ease-out); 					
+.inner-shadow(0, 1px, 2px, 0.4); 			
+.box-shadow(0 1px 2px #999); 				
+.columns(50px, 0, 50px, #EEE, solid, 1px); 	
+.translate(10px, 20px); 					
+.box-sizing(content-box);
+.background-size(cover) 					
+.user-select(none); 	
+.animation-delay(2s)
+
+*/
+@import "elements.less";
+
+@navyblue: #123C72;
+@navyyellow: #E7D184;
+
+
+//custom fonts (Marvel and Open Sans)
+@font-face {font-family: 'Marvel'; src: url('../fonts/marvel-italic-webfont.eot'); src: url('../fonts/marvel-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/marvel-italic-webfont.woff2') format('woff2'), url('../fonts/marvel-italic-webfont.woff') format('woff'), url('../fonts/marvel-italic-webfont.ttf') format('truetype'), url('../fonts/marvel-italic-webfont.svg#marvelitalic') format('svg'); font-weight: normal; font-style: italic; } @font-face {font-family: 'Marvel'; src: url('../fonts/marvel-regular-webfont.eot'); src: url('../fonts/marvel-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/marvel-regular-webfont.woff2') format('woff2'), url('../fonts/marvel-regular-webfont.woff') format('woff'), url('../fonts/marvel-regular-webfont.ttf') format('truetype'), url('../fonts/marvel-regular-webfont.svg#marvelregular') format('svg'); font-weight: normal; font-style: normal; } @font-face {font-family: 'Open Sans'; src: url('../fonts/opensans-bold-webfont.eot'); src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff'), url('../fonts/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg'); font-weight: bold; font-style: normal; } @font-face {font-family: 'Open Sans'; src: url('../fonts/opensans-regular-webfont.eot'); src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg'); font-weight: normal; font-style: normal;
+}
+
+// ====================================
+// 				Card flipping
+// ====================================
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	-webkit-perspective: 1000;
+	
+	transition: .6s ease-out all;
+}
+	/* flip the pane when hovered */
+	.flip-container.hover .flipper {
+		transform: rotateX(180deg);
+		
+	}
+
+.flip-container, .front, .back {
+	width: 700px;
+	height: 450px;
+	margin: auto;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	transform-origin: 100% 225px; /* half of height */
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateX(0deg);
+	box-shadow: 3px 3px 18px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+	box-shadow: 3px 3px 18px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.animated {
+	animation-duration: .4s;
+	animation-timing-function: ease-out;
+}
+
+.cardOutLeft{
+	animation-name: cardOutLeft;
+}
+
+@keyframes cardOutLeft {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) rotate(-15deg);
+		transform: translate3d(-100%, 0, 0)  rotate(-15deg);
+	}
+}
+
+
+.cardOutRight{
+	animation-name: cardOutRight;
+}
+
+@keyframes cardOutRight {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0) rotate(15deg);
+		transform: translate3d(100%, 0, 0)  rotate(15deg);
+	}
+}
+
+.cardInLeft{
+	animation-name: cardInLeft;
+}
+
+@keyframes cardInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0) rotate(15deg);
+		transform: translate3d(100%, 0, 0)  rotate(15deg);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+		transform: translate3d(0)  rotate(0deg);
+	}
+}
+
+.cardInRight{
+	animation-name: cardInRight;
+}
+
+@keyframes cardInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) rotate(-15deg);
+		transform: translate3d(-100%, 0, 0)  rotate(-15deg);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+		transform: translate3d(0)  rotate(0deg);
+	}
+}
+
+
+
+
+
+// ====================================
+// 				General
+// ====================================
+
+
+body{
+	background: url('../img/leather-background.png');
+	font-family: 'Open Sans',arial,sans-serif;
+}
+
+body,html{
+	overflow:hidden;
+	height: 100%;
+}
+
+h1,h2,h3,h4{
+	font-family: 'Marvel', sans-serif;
+	text-transform: uppercase;
+}
+
+
+
+.btn{
+	box-shadow: 0 5px 0 0 darken(@navyyellow,25%);
+    position: relative;
+    top: -5px;
+    transition: .3s ease-out all;
+    background-color: @navyyellow;
+    border:0;
+    color:darken(@navyyellow,55%);
+    font-size:1.3em;
+	padding:12px 20px;
+
+	&:active{
+		box-shadow: 0 0 0 0 darken(@navyyellow,25%);
+		background-color:darken(@navyyellow,25%);
+    	top: 0;
+	}
+}
+
+.btn-warning{
+	@warningColor:gray;
+	box-shadow: 0 5px 0 0 @warningColor;
+	background-color: white;
+	border: 1px solid @warningColor;
+	color: red;
+
+	&:active{
+		box-shadow: 0 0 0 0 @warningColor;
+		background-color:@warningColor;
+		color:white;
+    	top: 0;
+	}
+}
+
+	
+
+// ====================================
+// 				Structural
+// ====================================
+
+.top-bar{
+	background-color: #123C72;
+    border-bottom: 8px solid #E7D184;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.4);
+    min-height: 120px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 56px;
+
+    .nav a {
+	    color: #FFF;
+	    text-decoration: none;
+	    font-family: 'Marvel', 'Open Sans', arial, sans-serif;
+	    text-transform: uppercase;
+	    display: inline-block;
+	    padding: 6px 12px;
+	    font-size: 2em;
+	}
+}
+
+.content-bar{
+	margin-top: 150px;
+}
+
+
+// ====================================
+// 				Cards
+// ====================================
+
+.flipper{
+	margin:0 auto;
+	box-shadow: 3px 3px 12px 0 rgba(0,0,0,.4);
+	z-index:9;
+
+	&>div{
+		background-size:cover;
+		background-position: center;
+	}
+	.front{
+		.question-box{
+			background-color:RGBA(18, 60, 114, .9);
+			position: absolute;
+			bottom:0;
+			right: 0;
+			left:0;
+			padding: 20px;
+			text-align: center;
+			color:white;
+		}
+	}
+	.back{
+		padding: 120px 80px 20px 80px;
+		p{
+			color:white;
+			text-align: center;
+			font-size: 1.4em;
+			
+			&.back-question{
+				font-style:italic;
+				margin-bottom: 20px;
+			}
+		}
+		&::after{
+			content:'';
+			position:absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(51, 51, 51, 0.85);
+			z-index: -1;
+		}
+	}
+}
+
+
+.btn-navigation {
+    position: fixed;
+    top: 50%;
+    margin-top: -30px;
+    width: 70px;
+    height: 80px;
+    background-color: rgba(0,0,0,.3);
+    transition: .3s ease-out all;
+    text-align: center;
+    line-height: 80px;
+    z-index: 10;
+
+    &:active{
+		background-color: rgba(0,0,0,.8);
+    }
+
+    span {
+	    color: #FFF;
+	    font-size: 30px;
+	    line-height: 80px;
+	}
+
+	&.btn-navigation-prev{
+		left:0;
+	}
+
+	&.btn-navigation-next{
+		right:0;
+	}
+}
+
+.btn-difficulty{
+	box-shadow: 0 5px 0 0 lighten(#123C72,15%);
+    position: relative;
+    top: -5px;
+    transition: .3s ease-out all;
+    background-color: #3276B1;
+    border:0;
+    color:white;
+
+	&.difficulty-marked{
+		box-shadow: 0 0 0 0 lighten(#123C72,15%);
+		background-color:#123C72;
+    	top: 0;
+	}
+}
+
+.btn-default{
+	box-shadow: 0 5px 0 0 darken(@navyyellow,25%);
+    position: relative;
+    top: -5px;
+    transition: .3s ease-out all;
+    background-color: @navyyellow;
+    border:0;
+    color:darken(@navyyellow,55%);
+    font-size:1.3em;
+
+	&:active{
+		box-shadow: 0 0 0 0 darken(@navyyellow,25%);
+		background-color:darken(@navyyellow,25%);
+    	top: 0;
+	}
+}
+
+.top-bar{
+	.nav{
+		a{
+			color:white;
+			text-decoration: none;
+			font-family: 'Marvel', 'Open Sans', arial, sans-serif;
+			text-transform:uppercase;
+		}
+	}
+
+	#typeSelect{
+		width: auto;
+		display: inline-block;
+		bottom: -3px;
+		position: relative;
+		margin-right: 18px;
+	}
+}
+
+// ====================================
+// 				Modals
+// ====================================
+
+.modal{
+
+	.modal-dialog{
+		margin-top: 100px;
+	}
+
+	.modal-header{
+		background-color: @navyblue;
+		color:white;
+
+		h4{
+			font-size:1.6em;
+		}
+
+		.close{
+			color:white;
+			text-shadow:none;
+			opacity: 1;
+			font-size: 36px;
+			padding: 1px 10px;
+		}
+	}
+	.modal-content{
+		border-radius:0;
+	}
+}
+
+#infoModal{
+	.modal-content{
+		background-color: @navyblue;
+		background-image: url('../img/logo-background.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		color:white;
+		padding: 40px 40px;
+
+		h1{
+			margin:0;
+		}
+
+
+		h2{
+			font-family:'Open Sans',sans-serif;
+			font-size:1em;
+			margin-top: 4px;
+		}
+	}
+	.modal-footer{
+		border:0;
+		padding:0;
+	}
+
+	.version{
+		font-size: .8em;
+		opacity: .6;
+		display:block;
+		margin-top: 16px;
+	}
+}
+
+.stat-table{
+	width: 70%;
+    margin: 0 auto;
+}
+
+
+.top-bar {
+	.nav a {
+		display: block;
+	}
+}
+
+.navbar-toggle {
+	margin-top: 3px;
+}
+
+.nav .navbar-nav {
+	li a {
+		color: #fff;
+		&:hover, &:focus {
+			color: #fff;
+		}
+	}
+}
+
+.navbar-default {
+	.navbar-collapse, .navbar-form {
+	    border: none;
+	    box-shadow: none;
+	}
+	.navbar-collapse {
+	    padding-left: 5px;
+	}
+}
+
+.text-container {
+	margin-top: 450px;
+}
+
+
+
+
+.flip-container {
+	height: auto;
+    margin: auto;
+    width: auto;
+    max-width: 700px;
+    //min-width: 100%;
+
+	.front {
+	    height: 420px;
+	    margin: auto;
+	    width: auto;
+	    max-width: 700px;
+	    min-width: 100%;
+	}
+
+	.back {
+	    margin: auto;
+	    height: 420px;
+	    width: auto;
+	    max-width: 700px;
+	    min-width: 100%;
+	}
+
+	&.hover {
+		.flipper {
+			transform: rotateX(180deg);
+    		transform-origin: 100% 210px 0;
+		}
+	}
+
+	.fullscreen-img {
+		.front-clip {
+				height: 420px;
+				width: auto;
+			img {
+				height: 100%;
+			    margin: auto;
+			    width: 100%;
+			    max-width: 700px;
+			    min-width: 100%;
+			    object-fit: cover;
+			    -o-object-fit: cover;
+			    position: absolute;
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (max-width : 480px) {
+	.modal-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.modal {
+		.modal-dialog {
+			margin: 0;
+			height: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width : 768px) {
+ 	.top-bar {
+ 		padding-top: 35px;
+ 	}
+
+	.navbar-collapse {
+		width: 100%;
+	}
+}
+
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	.top-bar {
+		padding-top: 25px;
+	    min-height: 90px;
+	}
+
+	.flip-container {
+		.back {
+			padding-top: 50px;
+			height: 320px;
+
+			p {
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	.btn-navigation {
+		top: 35%;
+		width: 55px;
+	}
+
+	.text-container {
+		margin-top: 360px;
+	}
+
+	.front, .front-clip {
+		height: 320px !important;
+	}
+
+	#typeSelect {
+		width: 220px !important;
+		white-space: normal;
+		word-wrap: break-word;
+		overflow: visible;
+	}
+
+	.flipper {
+		&.back::after,
+		& > div {
+		    height: 320px;
+		}
+	}
+
+	.flip-container.hover .flipper {
+	    transform: rotateX(180deg);
+	    transform-origin: 100% 160px 0;
+	}
+}
+
+
+@media only screen and (min-width : 992px) {
+	.flip-container, .front, .back {
+	    //min-width: auto;
+	    //width: 100%;
+	}
+
+	.front-clip {
+	    width: 700px;
+	    height: 470px;
+	}
+}
+
+	
