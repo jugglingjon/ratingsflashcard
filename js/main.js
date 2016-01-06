@@ -61,8 +61,8 @@ $(document).ready(function(){
 		restrictTo='all';
 
 	//if local saved version available, load that deck
-	if(localStorage.navyCards){
-		sortedCards=$.parseJSON(localStorage.navyCards);
+	if(localStorage.navyRatingsCards){
+		sortedCards=$.parseJSON(localStorage.navyRatingsCards);
 	}
 
 	//populate array of card types
@@ -262,7 +262,7 @@ $(document).ready(function(){
     	history[history.length-1].deck=deck;
     	history[history.length-1].currentCard=currentCard;
 
-    	localStorage.setItem("navyCards", JSON.stringify(sortedCards));
+    	localStorage.setItem("navyRatingsCards", JSON.stringify(sortedCards));
     	$(this).addClass('difficulty-marked').siblings().removeClass('difficulty-marked');
     	
     	return false;
@@ -277,7 +277,7 @@ $(document).ready(function(){
     	history[history.length-1].deck=deck;
     	history[history.length-1].currentCard=currentCard;
 
-    	localStorage.setItem("navyCards", JSON.stringify(sortedCards));
+    	localStorage.setItem("navyRatingsCards", JSON.stringify(sortedCards));
     	$(this).addClass('difficulty-marked').siblings().removeClass('difficulty-marked');
 
     	return false;
@@ -321,7 +321,7 @@ $(document).ready(function(){
 		$.each(sortedCards.hard,function(){
 			this.difficulty='';
 		});
-		localStorage.setItem("navyCards", JSON.stringify(sortedCards));
+		localStorage.setItem("navyRatingsCards", JSON.stringify(sortedCards));
 
 		toNext();
 	}

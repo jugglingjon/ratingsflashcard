@@ -2,712 +2,398 @@
 var sortedCards={
     "easy":[],
     "hard":[
-  {
-    "image":"U S Navy Ships.jpg",
-    "question":"Name 3 types of Navy Ships.",
-    "answer":"Surface Combatants, Submarines, and Auxiliaries.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Langley.jpg",
-    "question":"In 1922, what was the Navy's first commissioned aircraft carrier?",
-    "answer":"USS Langley (CV-1).",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Ranger.jpg",
-    "question":"Name the first commissioned carrier designed and built in 1934 from the keel up as an aircraft carrier?",
-    "answer":"USS Ranger CV-4.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS George HW Bush.jpg",
-    "question":"What type of power is used in todays U.S. Navy Carriers?\n",
-    "answer":"Nuclear Power (CVN).",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"FA 18.jpg",
-    "question":"What is the primary Weapon System of the Carrier?",
-    "answer":"Aircraft.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Chicago.jpg",
-    "question":"When did the ship type \"Cruiser\" evolve?",
-    "answer":"1800's",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Chicago.jpg",
-    "question":"What year did the English first refer to a ship as a \"Cruiser\"?",
-    "answer":"1651",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Port Royal CG-73.jpg",
-    "question":"What is the role of the modern \"Cruiser\"?",
-    "answer":"Battle Force support.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"Cruiser Weapons.jpg",
-    "question":"Besides the Vertical Launch Missiles, what other type weapons do Cruisers use?",
-    "answer":"Phalanx Close-In Weapon System (CIWS).",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Bainbridge DD-1.jpg",
-    "question":"In the late 1890's, what type of boat was created to counter the new \"Torpedo Boat\" threat to Battleships?",
-    "answer":"Destroyers.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Gravely DDG-107.jpg",
-    "question":"What is the role of todays Destroyer?",
-    "answer":"Perform patrol, search and rescue operations.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"Destroyer - Weapons.jpg",
-    "question":"Destroyer weapons include 80 AVLS cells for what 3 types of missiles?",
-    "answer":"Tomahawk, ESSM, and Standard.",
-    "fun":"Other weapons include AGS 155 mm guns, Long-range land attack projectiles 155mm, and MK-46 close-in guns.",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Constitution.jpg",
-    "question":"What is the 18th century term for ships built for speed with at least 28 carriage mounted guns?",
-    "answer":"Frigates.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Constitution.jpg",
-    "question":"What year was the USS Constitution commissioned?",
-    "answer":"1794",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"Frigate - Mission.jpg",
-    "question":"What is the Frigate's primary mission?",
-    "answer":"Protection of shipping.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Samuel B Roberts.jpg",
-    "question":"The Frigate's weapon system includes which torpedoes?",
-    "answer":"Mark 46 torpedo (MK-46).",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Freedom LCS-1.jpg",
-    "question":"What is the mission of the Littoral Combat Ship Class (LCS)?",
-    "answer":"Counter Submarine threats, mine threats, and small surface craft attacks.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Independence LCS-2.jpg",
-    "question":"What weapons do the LCS-1 and LCS-2 classes carry?",
-    "answer":"57mm/70 MK BEA systems, RIM-116 Surface to Air missiles, Phalanx CIWS",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Lapwing.jpg",
-    "question":"Name the first ship built and commissioned specifically to locate and destroy mines.",
-    "answer":"The USS Lapwing.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS YMS-143.jpg",
-    "question":"At the beginning of WW II, what was the wooden hulled minesweeper called?",
-    "answer":"Auxiliary Motor Minesweeper (YMS).",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Chief MCM-14.jpg",
-    "question":"When did the Navy develop the new Minesweeper as part of the Mine Countermeasures (MC) force?",
-    "answer":"Early 1980's",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"Mine Warfare Ship Mission.jpg",
-    "question":"Mine warfare ships use cable cutting, mine detonating devices, video and  [ ______ ].",
-    "answer":"Sonar.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"Mine Warfare Weapons.jpg",
-    "question":"What type of grenade launcher is used on Mine Warfare ships?",
-    "answer":"Mark 19 (MK-19) grenade launchers.",
+
+    {
+    "question":"Aviation Boatswain's Mate",
+    "image":"AB.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Aviation Boatswain's Mates are responsible for aircraft catapults, arresting gear and barricades. They operate fuel and lube oil transfer systems, as well as direct aircraft on the flight deck and in hangar bays before launch and after recovery. They use tow tractors to position planes and operate support equipment used to start aircraft."
   },
   {
-    "image":"Amphibious Ships Mission.jpg",
-    "question":"Prior to WWII, what equipment was lacking onboard Navy ships,  preventing them from discharging tanks or heavy equipment?",
-    "answer":"Cranes.",
+    "question":"Air-Traffic Controller",
+    "image":"AC.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Air-Traffic Controllers assist with the speedy flow of air traffic by directing and controlling aircraft. They operate field lighting systems and communicate with aircraft. They furnish pilots with information regarding traffic, navigation and weather conditions, as well as operate and adjust ground-controlled approach (GCA) systems and interpret targets on radar screens and plot aircraft positions."
   },
   {
-    "image":"Amphibious Ships Mission.jpg",
-    "question":"Within an Expeditionary Strike Group, what type ship is a key element in Seapower 21's Sea Strike and Sea Basing?",
-    "answer":"Amphibious Assault Ships (LHA/LHD).",
+    "question":"Aviation Machinist's Mate",
+    "image":"AD.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Aviation Machinist's Mates are usually assigned to billets concerned with the maintenance of turbo-jet aircraft engines and associated equipment. They are responsible for the maintenance and replacement of aircraft engines and accessories, as well as performing the duties of flight engineers."
   },
   {
-    "image":"LHA LHD Ships.jpg",
-    "question":"Besides helicopters and landing craft what other vehicle is used  on LHA/LHD ships to transport/land Marines?",
-    "answer":"Amphibious vehicles",
+    "question":"Aviation Electrician's Mate",
+    "image":"AE.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Aviation Electrician's Mates are responsible for aircraft electrical power generating and converting systems. They maintain lighting, control, and indicating systems and can install as well as maintain flight and engine instrument systems."
   },
   {
-    "image":"USS San Diego LPD-22.jpg",
-    "question":"What other vehicle besides a helicopter is used to transport and land personnel and equipment via amphibious transport docks (LPD)?",
-    "answer":"Landing craft",
+    "question":"Aerographer's Mate",
+    "image":"AG.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Aerographer's Mates are the U.S. Navy's weather forecasters. They are trained in meteorology and the use of aerological instruments that monitor air pressure, temperature, humidity, wind speed, and direction. They prepare weather maps and forecasts and can analyze atmospheric conditions to determine the best flight levels for aircraft. An AG can measure wind and air density to aid the accuracy of anti-aircraft firing, shore bombardment and delivery of weapons by aircraft."
   },
   {
-    "image":"RAM.jpg",
-    "question":"What does RAM stand for when referring to the LHA/LHD/LPD weapons?",
-    "answer":"Rolling Airframe Missile (RAM).",
-    "fun":"LHA/LHD/LPD weapons include: Sea Sparrow, Phalanx, and Twin .50 cal. Machine guns",
-    "type":"Ships"
-  },
-  {
-    "image":"LCAC.jpg",
-    "question":"What does LCAC stand for?",
-    "answer":"Landing Craft Air Cushion (LCAC).",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"USS Pearl Harbor LSD-52.jpg",
-    "question":"Other than guns, what type weapons does the LSD have?",
-    "answer":"Phalanx CIWS.",
-    "fun":"",
-    "type":"Ships"
-  },
-  {
-    "image":"Alligator.jpg",
-    "question":"What was the name of the 1861 Union Navy's first submarine, propelled by a 47 foot oar?",
-    "answer":"\"Alligator\".",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS Holland.jpg",
-    "question":"What was the name of the first submarine purchased and commissioned by the Navy?",
-    "answer":"The USS Holland (SS-1).",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS Blueback SS-581.jpg",
-    "question":"When was the last US Navy diesel powered submarine decommissioned?",
-    "answer":"1990",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS Wyoming SSBN-742.jpg",
-    "question":"What type submarine is the Ohio Class submarine?",
-    "answer":"Ballistic and Cruise Missile.",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS North Dakota SSN-742.jpg",
-    "question":"What type submarine is the Virginia Class submarine?",
-    "answer":"Attack.",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS Seawolf SSN-21.jpg",
-    "question":"What type submarine is the Seawolf/Los Angles Class submarine?",
-    "answer":"Fast Attack.",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS North Dakota SSN-742.jpg",
-    "question":"What type of Missiles does the Virginia Class carry?",
-    "answer":"Tomahawk Cruise Missiles (12 vertical tubes).",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"USS Seawolf SSN-21.jpg",
-    "question":"What type of Missiles and Torpedoes do the Seawolf/Los Angles carry?",
-    "answer":"Tomahawk Cruise Missiles and MK-48 torpedoes.",
-    "fun":"",
-    "type":"Submarine"
-  },
-  {
-    "image":"Auxiliary.jpg",
-    "question":"In 1948, all military sea transport was placed under Navy Command, creating which organization?",
-    "answer":"Military Sea Transportation Service (MSTS).",
-    "fun":"",
-    "type":"Auxiliary"
-  },
-  {
-    "image":"Auxiliary.jpg",
-    "question":"What weapons are carried on the Auxiliary ships?",
-    "answer":"20mm Phalanx CIWS and 7.62 MM machine guns.",
-    "fun":"",
-    "type":"Auxiliary"
-  },
-  {
-    "image":"Auxiliary.jpg",
-    "question":"What is the purpose of the Fast Combat support Ships (T-AOE)?",
-    "answer":"Carry fuel, ammunition and supplies.",
-    "fun":"",
-    "type":"Auxiliary"
-  },
-  {
-    "image":"Unmanned Surface Vessels.jpg",
-    "question":"How are the four classes of Unmanned Surface Vessels (USV) determined?",
-    "answer":"Size and Mission.",
-    "fun":"",
-    "type":"Unmanned Surface Vessels"
-  },
-  {
-    "image":"Rigid Inflatable Boat.jpg",
-    "question":"The Harbor Class (USV) is what size Rigid inflatable boat (RIB)?",
-    "answer":"7 meters.",
-    "fun":"",
-    "type":"Unmanned Surface Vessels"
-  },
-  {
-    "image":"Snorkler Class.jpg",
-    "question":"The Snorkler Class (USV) is a semi-submersible craft capable of what speeds?",
-    "answer":"15+ knots.",
-    "fun":"",
-    "type":"Unmanned Surface Vessels"
-  },
-  {
-    "image":"Fleet Class.jpg",
-    "question":"The Fleet Class (USV) is capable of  speeds up to?",
-    "answer":"32-35 knots.",
+    "question":"Aviation Structural Mechanic",
+    "image":"AM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Surface Vessels"
+    "answer":"Aviation Structural Mechanics are responsible for the maintenance of many aircraft parts such as wings, fuselage, tail, control surfaces, landing gear, and hydraulic systems. AME's maintain and repair oxygen, cockpit and cabin pressurization, and ejection seat systems."
   },
   {
-    "image":"Unmanned Underwater Vehicles.jpg",
-    "question":"What does REMUS stand for when referring to Unmanned Underwater Vehicles (UUV)?",
-    "answer":"Remote Environmental Monitoring Unit System (REMUS).",
+    "question":"Aviation Ordnanceman",
+    "image":"AO.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Underwater Vehicles"
-  },
-  {
-    "image":"FA-18 Super Hornet.jpg",
-    "question":"Evolution of warfare and conflict areas require what type capability?",
-    "answer":"Multi-role.",
-    "fun":"",
-    "type":"Aircraft"
-  },
-  {
-    "image":"FA-18 Super Hornet2.jpg",
-    "question":"F/A-18 Super Hornet is capable of in-flight  [ ______ ]?",
-    "answer":"Refueling.",
-    "fun":"",
-    "type":"Aircraft"
-  },
-  {
-    "image":"FA 18 Super Hornet Weapons.jpg",
-    "question":"Name the 2 types of bombs on the F/A-18 Super Hornet.",
-    "answer":"Laser Guided and General Purpose.",
-    "fun":"",
-    "type":"Aircraft"
-  },
-  {
-    "image":"P-3 Orion.jpg",
-    "question":"What aircraft replaced the P-3 Orion?",
-    "answer":"P-8 Poseidon.",
-    "fun":"",
-    "type":"Aircraft"
-  },
-  {
-    "image":"P-8 Poseidon.jpg",
-    "question":"Missions of the P-8 Poseidon missions include Maritime Patrol, Littoral Operations, Anti-surface Warfare, and  [ ______ ].",
-    "answer":"Reconnaissance.",
-    "fun":"",
-    "type":"Aircraft"
-  },
-  {
-    "image":"C-2 Greyhound.jpg",
-    "question":"Name Three Transport Aircraft?",
-    "answer":"C-130, KC-130, and C-2.",
-    "fun":"KC-130 Hercules can be configured as an inflight refueling platform.",
-    "type":"Aircraft"
+    "answer":"Aviation Ordnancemen operate and handle aviation ordnance equipment. They are responsible for the maintenance of guns, bombs, torpedoes, rockets, and missiles. Their duties include the stowing, issuing, and loading of munitions and small arms."
   },
   {
-    "image":"Transport Weapons.jpg",
-    "question":"Which of the 3 Transport Aircraft is unarmed?",
-    "answer":"C-2.",
+    "question":"Aviation Support Equipment Technician",
+    "image":"AS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Aviation Support Equipment Technicians perform intermediate maintenance on aviation accessory equipment at naval air stations and aboard aircraft carriers. They maintain gasoline and diesel engines, gas turbine compressor units and electrical systems."
   },
   {
-    "image":"EA-18G Growler.jpg",
-    "question":"Name the tactical jamming system on the EA-18G Growler?",
-    "answer":"ALQ-99, airborne electronic warfare system.",
+    "question":"Aviation Electronics Technician",
+    "image":"AT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Aviation Electronics Technicians are responsible for the maintenance of all aircraft radio, radar, and other rapid communications devices. They maintain all navigation equipment, and calibration of aviation and shipboard systems alike."
   },
   {
-    "image":"E2 Hawkeye.jpg",
-    "question":"The E2 Hawkeye is responsible for Combat Search and  [ ______ ].",
-    "answer":"Rescue.",
+    "question":"Naval Aircrewman",
+    "image":"AW.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Naval Aircrewman operate airborne radar and electronic equipment used in detecting, locating, and tracking submarines. They provide information for aircraft and surface navigation and act as helicopter-rescue crewmen, and function as part of the flight crew on long-range and intermediate-range aircraft. Beginning in 2009, other enlisted Aviation ratings that perform flight engineer or loadmaster duties in Navy aircraft will convert to the AW rating."
   },
   {
-    "image":"Helicopter.jpg",
-    "question":"What are the 3 types of H-60 helicopters and thier primary missions?",
-    "answer":"SH-60 Anti-submarine, \nHH-60 Search and Rescue, \nMH-60 VERTREP.",
+    "question":"Aviation Maintenance Administrationman",
+    "image":"AZ.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Aviation Maintenance Administration men perform clerical, administrative, and managerial duties necessary to keep aircraft maintenance activities running smoothly. They schedule and coordinate the maintenance workload, including inspections and modifications to aircraft and equipment."
   },
   {
-    "image":"AGM-119 missile.jpg",
-    "question":"What type of machine gun does the H-60 carrry? ",
-    "answer":"GAU-21 .50 cal.",
+    "question":"Aircrew Survival Equipmentman",
+    "image":"PR.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Aircrew Survival Equipmentmen are responsible for the packing and care of parachutes. They maintain flight clothing, rubber life rafts, life jackets, oxygen-breathing apparatus, protective clothing, and air-sea rescue equipment. The abbreviation comes from the former official title (still used informally) of parachute rigger."
   },
   {
-    "image":"MH-53 Sea Dragon.jpg",
-    "question":"The MH-53 Sea Dragon provides  [ ______ ] support.",
-    "answer":"Assault.",
+    "question":"Builder",
+    "image":"BU.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Navy builders are like civilian construction workers. They are skilled carpenters, plasterers, roofers, cement finishers, asphalt workers, masons, and painters. They build and repair all types of structures including: piers, bridges, towers, schools, offices, houses, and other buildings."
   },
   {
-    "image":"MQ-4C Triton.jpg",
-    "question":"What is the mission of the MQ-4C Triton?",
-    "answer":"Real time intelligence reconnaissance, maritime surveillance, and search and rescue.",
+    "question":"Construction Electrician",
+    "image":"CE.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Construction Electricians are responsible for the power production and electrical work required to build and operate airfields, roads, barracks, and hospitals. The work of a CE is equivalent to civilian construction electricians, telephone and electrical repairmen, lineman, and others."
   },
   {
-    "image":"X-47B Unmanned Combat Air System.jpg",
-    "question":"What type of drone is the X-47B UCAS?",
-    "answer":"Strike Fighter.",
+    "question":"Construction Mechanic",
+    "image":"CM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Construction Mechanics maintain many types of construction machinery including; buses, dump trucks, bulldozers, rollers, cranes, backhoes, and pile drivers. They work on gasoline and diesel engines and transmissions. They also repair electrical, hydraulic, pneumatic and steering systems."
   },
   {
-    "image":"MQ-8C Fire Scout.jpg",
-    "question":"What is the mission of the MQ-8C Fire Scout unmanned helicopter?",
-    "answer":"Ship based intelligence gathering.",
+    "question":"Engineering Aide",
+    "image":"EA.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Engineering Aides provide construction engineers with information needed to develop final construction plans. They conduct surveys for roads, airfields, buildings, etc. They perform soil tests, prepare topographic and hydrographic maps. They also survey for sewers, water lines, drainage systems and underwater excavations."
   },
   {
-    "image":"USS Langley.jpg",
-    "question":"Prior to conversion to a carrier, what type of a ship was the USS Langley?",
-    "answer":"Collier - a bulk cargo ship designed to carry coal.",
+    "question":"Equipment Operator",
+    "image":"EO.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Equipment Operators work with heavy machinery such as bulldozers, power shovels, pile drivers, etc. They use this machinery to dig ditches, excavate for building foundations, break up old concrete or asphalt paving and pour new paving. They grade and remove debris from construction sites, raise girders, and move and set in place other pieces of equipment or materials needed for the job."
   },
   {
-    "image":"USS Ranger.jpg",
-    "question":"During WWII, the aircraft carrier became the backbone of Navy Task Forces.  What ship did it replace?",
-    "answer":"Battleship.",
+    "question":"Steelworker",
+    "image":"SW.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Steelworkers rig and operate all special equipment used to move or hoist structural steel, structural shapes and similar material. They erect and dismantle steel bridges, piers, buildings, storage tanks, etc. They work with steel shapes, plates and built-up sections used in the construction of overseas facilities. They are skilled in arc welding, MIG welding, TIG welding, and gas welding."
   },
   {
-    "image":"USS George HW Bush.jpg",
-    "question":"What is the carriers mission? ",
-    "answer":"Carry, Launch, and Retrieve Aircraft Quickly, Efficiently and Safely.",
+    "question":"Utilitiesman",
+    "image":"UT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Utilitiesmen supervise and perform tasks involved in the installation and maintenance of plumbing, steam, compressed air and fuel storage and distribution systems. They maintain air conditioning and refrigeration equipment, as well as sewage collecting and disposal facilities."
   },
   {
-    "image":"FA 18.jpg",
-    "question":"What does CIWS stand for in Phalanx CIWS?",
-    "answer":"Close in Weapons System (CIWS).",
+    "question":"Hospital Corpsman",
+    "image":"HM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Hospital Corpsmen are medical professionals who provide health care to service people and their families. They serve as pharmacy technicians, medical technicians, nurse's aides, physician's or dentist's assistants, battlefield medics, and more. All work falls into several categories: first aid and minor surgery, patient transportation, patient care, prescriptions and laboratory work, food service inspections, and clerical duties."
   },
   {
-    "image":"USS Chicago.jpg",
-    "question":"What changed, requiring the need for a middle sized ship (Cruiser)?",
-    "answer":"Emerging change in Naval strategy.",
+    "question":"Boatswain's Mate",
+    "image":"BM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Boatswain's Mates train and supervise personnel in all activities relating to marlinspike, deck, and boat seamanship, and oversee the maintenance of the ship's external structure and deck equipment. They act as petty officers in charge of small craft and may perform duties as master-at-arms, serve in or take charge of gun crews, and damage control parties.\n\nBoatswain's Mates are also responsible for the \"deck side\" watch. In port three of the crew are on deck watch 24/7 (in hazardous areas such as war zones there are more than three, depending on ship's size). They are the Officer of the Deck, Boatswain's Mate of the watch, and Messenger of the Watch (usually a Seaman or Seaman Apprentice). They are stationed very close to the gangway and monitor all the comings and goings of persons to and from the ship. At sea the Boatswain's Mate of the watch is within ear shot of the conning officer (on the bridge). The boatswain's Mate of the watch supervises the rest of the enlisted watch standers on deck. They include helmsman, messenger of the watch, and all the look outs. In port or at sea the Boatswain's Mate of the watch is charged with the responsibility of making all announcements to the crew; everything from chow call to general quarters (battle stations)."
   },
   {
-    "image":"USS Chicago.jpg",
-    "question":"What were negative factors associated with early armored steel ships? ",
-    "answer":"The were slow with limited endurance. ",
+    "question":"Culinary Specialist",
+    "image":"CS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Culinary Specialists prepare menus and order the quantities and types of food items. They operate galley and dining facilities, manage large facilities, keep records for food supplies and financial budgets, and can even serve as flight attendant aircrewmen. They can also serve as personal food service specialist, household/estate manager or chef for an admiral, the First Family, President of the United States at Camp David and the White House, to the Vice President at Number One Observatory Circle or for a commanding officer aboard ship or at shore bases. Ashore, Culinary Specialists often manage and maintain clubs, TAD hotels and Permanent Party naval barracks."
   },
   {
-    "image":"USS Port Royal CG-73.jpg",
-    "question":"True or False.  The cruiser has the capability of supporting carrier battle groups, amphibious forces and operating independently",
-    "answer":"TRUE.",
+    "question":"Cryptologic Technician",
+    "image":"CT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Cryptologic Technicians control the flow of messages and information and also conduct Electronic Warfare. Their work depends on their special branch: CTAs or Administration Cryptologic Technicians (As of 01 OCT 07 CTA merged with the YN rating) perform administrative and clerical duties that control access to classified material. CTIs or Interpretive Cryptologic Technicians handle radiotelephone communications and foreign language translation. CTMs or Maintenance Cryptologic Technicians maintain electronic and electromechanical equipment. CTNs or Networking Cryptologic Technicians handle computer communication. CTRs or Collection Cryptologic Technicians handle all Morse code communications and operate radio direction-finding equipment. Finally, CTTs or Technical Cryptologic Technicians deal with Electronic Warfare. CTTs are the first line of defense against inbound threats and Anti-Ship missiles. They also collect, analyze, and provide electronic intelligence support to commands throughout the world."
   },
   {
-    "image":"USS Bainbridge DD-1.jpg",
-    "question":"After WWII, what changed the Destroyers role as a counter to Torpedo Boats?",
-    "answer":"Introduction of Guided Missiles.",
+    "question":"Explosive Ordnance Disposal",
+    "image":"EOD.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Explosive Ordnance Disposal Technicians locate, identify, render safe and dispose of all forms of ordnance (conventional, nuclear, chemical, biological, military, and improvised) both U.S. and foreign made. Parachute or Helicopter insertion and deep-sea diving capabilities are sometimes necessary to perform this mission. In addition to working closely with other military services, EOD technicians occasionally assist civilian law enforcement agencies."
   },
   {
-    "image":"USS Gravely DDG-107.jpg",
-    "question":"At the start of the 21st century, what three countries operate the heavier class Destroyer?",
-    "answer":"United States, Russia and Peru.",
+    "question":"Electronics Technician",
+    "image":"ET.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Electronics Technicians are responsible for electronic equipment used to send and receive messages, detect enemy planes and ships, and determine target distances. They maintain, repair, and calibrate all electronic equipment used for communications, detection tracking, identification, and navigation. Specially qualified Electronics Technicians are employed onboard nuclear-powered ships to operate the nuclear reactor and maintain its control subsystems."
   },
   {
-    "image":"USS Constitution.jpg",
-    "question":"By the end of 2015, what Force will the remaining Frigates be part of? ",
-    "answer":"Active Reserve.",
+    "question":"Fire Controlman",
+    "image":"FC.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Fire Controlmen maintain the control mechanism used in weapons systems on combat ships. Complex electronic, electrical and hydraulic equipment is required to ensure the accuracy of Navy guided-missile and surface gunfire-control systems. They are responsible for the operation, routine care and repair of this equipment, which includes radars, computers, weapons direction equipment, target designation systems, gyroscopes and rangefinders."
   },
   {
-    "image":"USS Constitution.jpg",
-    "question":"When commissioned why was the USS Constitution considered a \"Frigate\"?",
-    "answer":"Because principle armament was still mounted on a single deck.",
+    "question":"Fire Control Technician",
+    "image":"FT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Fire Control Technicians maintain the electronic equipment used in submarine weapons systems. They are responsible for the operation and maintenance of the complex electronic, electrical and mechanical equipment required to ensure the accuracy of Navy guided-missile systems and underwater weapons. They are responsible for ship safety by recognizing and analyzing data from several critical systems including sonar, radar, periscope, radio, and torpedo inputs."
   },
   {
-    "image":"USS Freedom LCS-1.jpg",
-    "question":"How was the multi-mission capability achieved on the Littoral Combat Ship (LCS)? ",
-    "answer":"Introduction of the module concept, allowing the ship to change mission packages.",
+    "question":"Gunner's Mate",
+    "image":"GM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Gunner's Mates operate and maintain all gunnery equipment, guided-missile launching systems, rocket launchers, guns, turrets, and associated equipment. They repair electrical, electronic, hydraulic and mechanical systems, and make detailed casualty analysis. They test ammunition, missiles and their ordnance components. GMs train and supervise personnel in the handling and stowage of ammunition, missiles, and assigned ordnance equipment."
   },
   {
-    "image":"USS Independence LCS-2.jpg",
-    "question":"Which Littoral Combat Ship (LCS) class is larger in size?",
-    "answer":"LCS 2.",
+    "question":"Intelligence Specialist",
+    "image":"IS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Intelligence Specialists are involved in collecting and interpreting intelligence especially secret information about enemies or potential enemies. They analyze photographs and prepare charts, maps, and reports that describe in detail the strategic situation all over the world."
   },
   {
-    "image":"USS Lapwing.jpg",
-    "question":"Prior to 1917, what type Navy ships were used to locate and destroy mines? ",
-    "answer":"Sloops and Tugs.",
+    "question":"Information Systems Technician ",
+    "image":"IT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Information Systems Technicians design, install, operate, and maintain state-of-the-art informations systems. This technology includes local and wide area networks, mainframe, mini and microcomputer systems and associated peripheral devices. They also write programs to handle the collection, manipulation and distribution of data for a wide variety of applications and requirements. They perform the functions of a computer system analyst, operate telecommunications systems including automated networks and the full spectrum of data links and circuits."
   },
   {
-    "image":"USS YMS-143.jpg",
-    "question":"How are mines detonated by the Avenger class mine sweeper?",
-    "answer":"Remote Control.",
+    "question":"Legalman",
+    "image":"LN.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Legalmen are trained paralegals who assist professionals in the field of law. They work in Navy legal offices, performing administrative and clerical tasks necessary to process claims, conduct court and administrative hearings. They maintain records, documents and legal reference libraries. Legalmen may give advice on tax returns, voter registration procedures, immigration and customs regulations, regulations governing Social Security and veterans' benefits. They perform many duties related to courts-martial and nonjudicial punishment hearings."
   },
   {
-    "image":"Amphibious Ships Mission.jpg",
-    "question":"What forced the Navy to focus on developing specific mission ships?",
-    "answer":"The need to land troops and equipment from the sea.",
+    "question":"Logistics Specialist",
+    "image":"LS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Logistics Specialists manage inventories and issuance of repair parts/general supplies and specialized supplies (e.g., personal flight gear for naval aircrews or specialized combat equipment for Navy SEALs or Naval Military Construction Battalion \"Seabees\"), as well as distribute mail for naval ships, submarines, aviation squadrons, and shore-based activities. They procure, receive, store and issue material and repair selected components. They utilize financial accounting and database systems to perform inventory and financial management functions. Additionally, they sort and distribute all official and personal mail, manage money order and stamp inventories, and maintain financial and inventory reports."
   },
   {
-    "image":"LHA LHD Ships.jpg",
-    "question":"Which Amphibious ship primarily uses the Littoral Combat Ship (LCS)  to move heavy equipment and troops?",
-    "answer":"Dock Landing Ship (LSD).",
+    "question":"Master-at-Arms",
+    "image":"MA.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Ships"
+    "answer":"Masters-at-Arms uphold law and order aboard ships, shore stations, control access to naval installations, and deploy overseas with expeditionary forces and squadrons performing Antiterrorism/Force Protection (AT/FP) duties. The basic duty of an MA is to enforce rules and regulations, maintain good order and discipline, and protect life and property. Some other duties include conducting criminal investigations, personal protective services, take part in correctional and rehabilitative programs, Military Working Dog (MWD) handlers, small arms instruction, lethal and non-lethal weapons training, and organize and train sailors assigned to Shore Patrol police duty. Their equivalents in the civilian world are detectives, security guards, and policemen."
   },
   {
-    "image":"Alligator.jpg",
-    "question":"Why was the Alligator unable to finish it's first mission?  ",
-    "answer":"It was underpowered, unwieldy and unsafe.",
+    "question":"Mass Communication Specialist",
+    "image":"MC.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Mass Communication Specialists are public affairs and visual information experts. They present the U.S. Navy story to audiences in the Navy and to the rest of the world through a variety of media. Mass Communication Specialists write and produce print and broadcast journalism, news, and feature stories for military and civilian newspapers, magazines, television and radio broadcast stations. They record still and video photography of military operations, exercises, and other Navy events."
   },
   {
-    "image":"USS Holland.jpg",
-    "question":"How many torpedoes was the USS Holland (SS-1) able to carry?",
-    "answer":"Three.",
+    "question":"Mineman",
+    "image":"MN.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Minemen test, maintain, and repair mines and their components. They are responsible for assembling, testing, and delivering mines to the planting agent. They maintain minehandling and minelaying equipment.[5] At sea, Minemen primarily man Avenger Class mine countermeasures ships as well the new Independence Class littoral combat ships as a part of the MCM module. Their duties at sea include but are not limited to: operating mine hunting sonar, operating remote controlled submersibles in prosecuting mine-like contacts, rigging and deploying minesweeping gear as well as standing normal underway deck and Combat Information Center watches."
   },
   {
-    "image":"USS Blueback SS-581.jpg",
-    "question":"Which war did submarines see their greatest success?",
-    "answer":"World War II.",
+    "question":"Missile Technician",
+    "image":"MT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Missile Technicians operate and maintain the UGM-133 Trident II D5 missile Strategic Weapon System (SWS) carried aboard ballistic missile submarines and at Strategic Weapons facilities. Missile Technicians operate and maintain electronic, mechanical, hydraulic and pneumatic Strategic Weapon subsytems, test and operate the MK98 fire-control system and MK 6 guidance system, perform classified targeting operations, and provide physical security to nuclear weapon systems."
   },
   {
-    "image":"USS Wyoming SSBN-742.jpg",
-    "question":"Where are the \"sail planes\" located on the Ohio Class submarine?",
-    "answer":"On the Conning Tower.",
+    "question":"Musician",
+    "image":"MU.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Musicians play in official Navy bands and special groups such as jazz bands, dance bands and small ensembles. They give concerts and provide music for military ceremonies, religious services, parades, receptions and dances. Official unit bands usually do not include stringed instruments, but each musician must be able to play at least one brass, woodwind or percussion instrument. Sailors are selected for this rating through auditions."
   },
   {
-    "image":"USS North Dakota SSN-742.jpg",
-    "question":"What was the name of the last diesel submarine decommissioned in 1990?",
-    "answer":"USS Blue Back (SS-581).",
+    "question":"Navy Counselor",
+    "image":"NC.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Navy Counselors offer vocational guidance to Navy personnel � individually and in groups � aboard ships and at shore facilities. They assess the interests, aptitudes, abilities and personalities of individuals and assist them in reaching their full potential. They are responsible directly to the command triumvirate (CO, XO, CMC) and report on many items such as retention, attrition, advancement, testing and various other facets of the career development program. Additionally, it is their keen eye and attention to detail that ensure personnel throughout the command are updated on current Navy policies in regards to career management, off duty education and administrative procedures, among various other responsibilities."
   },
   {
-    "image":"USS North Dakota SSN-742.jpg",
-    "question":"What is the primary mission of the Virginia Class Submarine? ",
-    "answer":"Seek and destroy enemy submarine and surface ships.",
+    "question":"Operations Specialist",
+    "image":"OS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Operations Specialists operate radar, navigation and communications equipment in the shipboard combat information centers (CICs) or bridges. They detect and track ships, planes, and missiles. They operate and maintain identification friend or foe (IFF) systems, electronic countermeasures (ECM) equipment and radio-telephones. They control and assist aircraft."
   },
   {
-    "image":"USS Seawolf SSN-21.jpg",
-    "question":"Which class of submarine is the Seawolf replacing?",
-    "answer":"Los Angeles class.",
+    "question":"Personnel Specialist",
+    "image":"PS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Submarine"
+    "answer":"Personnel Specialists provide enlisted personnel with information and counseling about Navy jobs, opportunities for general education and training, and promotion requirements. They assist enlisted members' families with legal aid or reassignments in hardship situations. Personnel Specialists keep records up to date, prepare reports, type letters and maintain files."
   },
   {
-    "image":"Auxiliary.jpg",
-    "question":"In 1970, the Military Sea Transportation Service (MSTS) was renamed  [ ______ ].",
-    "answer":"Military Sealift Command (MSC).",
+    "question":"Quartermaster",
+    "image":"QM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Auxiliary"
+    "answer":"Quartermasters assist the navigator and officer of the deck (OOD), steer the ship, take radar bearings and ranges, make depth soundings and celestial observations, plot courses and command small craft."
   },
   {
-    "image":"Auxiliary.jpg",
-    "question":"What type of auxiliary ship is an \"AS\"?",
-    "answer":"Submarine Tender.",
+    "question":"Religious Programs Specialist",
+    "image":"RP.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Auxiliary"
+    "answer":"Religious Programs Specialists assist Navy chaplains with administrative and budgetary tasks. They serve as custodians of chapel funds, keep religious documents and stay in contact with religious and community agencies. They prepare devotional and religious educational materials, set up volunteer programs, operate shipboard libraries, supervise chaplains' offices and perform administrative, clerical and secretarial duties. They train personnel in religious programs and publicize religious activities."
   },
   {
-    "image":"Unmanned Surface Vessels.jpg",
-    "question":"What is the maximum size of the X-Class Unmanned Surface Vessel (USV)?",
-    "answer":"3 meters.",
+    "question":"Special Warfare Boat Operator",
+    "image":"SB.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Surface Vessels"
+    "answer":"Special Warfare Boat Operators (SWCC - Special Warfare Combatant-Craft Crewmen) drive fast speedboats down narrow, winding rivers, or the open ocean while performing high speed, medium range, or all weather insertion/extraction of Special Operations Forces. They participate in maritime interdiction operations, tactical swimmer operations, intelligence collection, operation deception, and Coastal patrol."
   },
   {
-    "image":"Rigid Inflatable Boat.jpg",
-    "question":"True or False, The Harbor Class USV is capable of speeds not to exceed 35 knots.",
-    "answer":"FALSE.  The X-class UAV can exceed 35 knots.",
+    "question":"Ship's Serviceman",
+    "image":"SH.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Surface Vessels"
+    "answer":"Ship's Servicemen manage barber shops, tailor shops, ships' uniform stores, laundries, dry cleaning plants and cobbler shops. They serve as clerks in exchanges, gas stations, warehouses, and commissary stores. Some ship's servicemen function as Navy club managers."
   },
   {
-    "image":"Snorkler Class.jpg",
-    "question":"What is the speed of the Snorkler Class Unmanned Surface Vessel (USV)?",
-    "answer":"15 plus knots.",
+    "question":"Special Warfare Operator",
+    "image":"SO.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Surface Vessels"
+    "answer":"Special Warfare Operators are Navy SEALs, which are the Navy's primary unconventional warfare units that conduct warfare at SEa, in the Air, and on Land (SEAL). A SEAL's core skills consist of: Sniper, Breacher, Communicator, Maritime/Engineering, Close Air Support, Corpsman, Driver, Navigator (Rural/Urban/Protective Security), Heavy Weapons Operator, Sensitive Site Exploitation, Air Operations (Parachuting/Helicopter Insertion, etc.), Climber, Interrogator, Explosive Ordnance Disposal, Technical Surveillance, and Advanced Special Operations. SEALs oversee ocean-borne mine disposal, carry out direct action raids against military targets, conduct reconnaissance, and secure beachheads for invading amphibious forces."
   },
   {
-    "image":"Fleet Class.jpg",
-    "question":"The Fleet Class Unmanned Surface Vessel (USV) is an 11 meter, planeing and  [ ______ ] hull craft.",
-    "answer":"Semi-planeing.",
+    "question":"Sonar Technician",
+    "image":"ST.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Surface Vessels"
+    "answer":"Sonar Technicians are responsible for underwater surveillance. They assist in safe navigation and aid in search and rescue and attack operations. They operate and repair sonar equipment and jam enemy sonars. Sonar Technicians operate, maintain and repair sonar systems, antisubmarine warfare fire control equipment and other various equipment associated with underwater detection, counter-detection, warfare and communications."
   },
   {
-    "image":"Unmanned Underwater Vehicles.jpg",
-    "question":"What class Unmanned Underwater Vehicle (UUV) is designed to search, classify and map shallow water?",
-    "answer":"Swordfish/Kingfish.",
+    "question":"Yeoman",
+    "image":"YN.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Unmanned Underwater Vehicles"
+    "answer":"Yeomen perform Administrative and Clerical work. They deal with visitors, coordinate worldwide travel, submit passport applications, telephone calls and incoming mail, and assist various ships, squadrons, staff commands, and special warfare teams around the world with administrative tasks. They write and type business and social letters, notices, directives, forms and reports."
   },
   {
-    "image":"FA-18 Super Hornet2.jpg",
-    "question":"What type aircraft is a day/night precision strike, all weather fighter/attack aircraft?",
-    "answer":"F/A-18.",
+    "question":"Damage Controlman",
+    "image":"DC.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Damage Controlmen perform the work necessary for damage control, ship stability, fire-fighting. They also prepare defenses against chemical, biological and radiological (CBR) warfare attacks. They instruct personnel in damage control and CBR defense and repair damage-control equipment and systems."
   },
   {
-    "image":"FA 18 Super Hornet Weapons.jpg",
-    "question":"The F/A-18 Super Hornet can conduct  [ ______ ] and air defense suppression.",
-    "answer":"Close air support.",
+    "question":"Electrician's Mate",
+    "image":"EM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Electrician's Mates are responsible for the operation and repair of a ship's or station's electrical power plant and electrical equipment. They also maintain and repair power and lighting circuits, distribution switchboards, generators, motors and other electrical equipment. Specially qualified Electrician's Mates are employed onboard nuclear-powered ships to maintain the control subsystems in nuclear reactors."
   },
   {
-    "image":"P-3 Orion.jpg",
-    "question":"What is the primary mission of the P-8 Poseidon? ",
-    "answer":"Submarine Patrol.",
+    "question":"Engineman",
+    "image":"EN.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Enginemen are responsible for internal diesel and gasoline engines. They also maintain refrigeration, air-conditioning, distilling-plant engines and compressors."
   },
   {
-    "image":"Transport Weapons.jpg",
-    "question":"The C-130 and KC-130 are not normally armed, but can be configured to [ ______ ].",
-    "answer":"Launch missiles.",
+    "question":"Gas Turbine System Technician",
+    "image":"GS.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Gas Turbine System Technician are responsible for all gas turbine engines. They maintain propulsion machinery, including gears, shafting and controllable pitch propellers, assigned auxiliary equipment propulsion control systems, electrical and electronic circuitry up to the printed circuit module, and alarm and warning circuitry. They handle administrative tasks related to gas turbine propulsion system operation and maintenance."
   },
   {
-    "image":"EA-18G Growler.jpg",
-    "question":"The EA-18G Growler has the capability to launch Air to Air Missiles &  [ ______ ].",
-    "answer":"AGM-88 missiles.",
+    "question":"Hull Maintenance Technician",
+    "image":"HT.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Hull Maintenance Technicians are responsible for maintaining ships' hulls, fittings, piping systems and machinery. They install and maintain all shipboard and shore based plumbing and piping systems. They look after a vessel's safety and survival equipment and perform many tasks related to damage control."
   },
   {
-    "image":"E2 Hawkeye.jpg",
-    "question":"True or False?  The E2 Hawkeye carries no offensive weapons.",
-    "answer":"TRUE.",
+    "question":"Interior Communications Electrician",
+    "image":"IC.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Interior Communications Electricians operate and repair electronic devices used in the ship's interior communications systems, SITE TV systems, 1MC (public address system), electronic megaphones and other announcing equipment. They are responsible for the gyrocompass systems."
   },
   {
-    "image":"AGM-119 missile.jpg",
-    "question":"What weapons can the H-60 carry? ",
-    "answer":"Hellfire missiles, Rockets, AGM-119 Anti-ship missiles.",
+    "question":"Machinist's Mate",
+    "image":"MM.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Machinist's Mates are responsible for the continuous operation of the many engines, compressors, gears, refrigeration, and air-conditioning equipment along with other types of machinery onboard ships and shore installations. They are responsible for the ship's steam propulsion and auxiliary equipment and the outside (deck) machinery. Specially trained and qualified Machinist's Mates are deployed onboard nuclear-powered ships to maintain the machinery and piping in nuclear reactors.Some nuclear machinists mates (Engineering Laboratory Technicians) receive additional specialization in Health Physics and maintaining reactor chemistry. "
   },
   {
-    "image":"MQ-4C Triton.jpg",
-    "question":"Which aircraft is considered \"The Future\" of Unmanned Aircraft?",
-    "answer":"MQ-4C Triton.",
+    "question":"Machinery Repairman",
+    "image":"MR.png",
+    "type":"Navy",
     "fun":"",
-    "type":"Aircraft"
+    "answer":"Machinery Repairmen are skilled machine tool operators. They make replacement parts and repair or overhaul a ship's engine auxiliary equipment, such as evaporators, air compressors and pumps. They repair deck equipment, including winches, hoists, condensers, and heat exchange devices. Shipboard Machinery Repairmen frequently operate main propulsion machinery, besides performing machine shop and repair duties."
   },
   {
-    "image":"",
-    "question":"",
-    "answer":"",
+    "question":"Navy Diver",
+    "image":"ND.png",
+    "type":"Navy",
     "fun":"",
-    "type":""
+    "answer":"Navy Divers are responsible for a wide variety of tasks like underwater ship maintenance, construction, explosive ordnance disposal (EOD), and underwater rescue. They are assigned to Naval Special Warfare Units to provide diving technical expertise and supervisory support to all submersible operations."
   }
 ]
 };
