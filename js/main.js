@@ -552,12 +552,17 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('#filter-toggle').click(function(){
+		$('.filters').slideToggle(300);
+		$('.reference').toggleClass('filtering');
+	});
 
 	//to intro from question
 	$('#back-question').click(function(){
 		$('.nav-question').animateOut('fadeOutUp');
 
 		$('.question').animateOut('fadeOutUp',function(){
+			$('.question-rank-title,.question-rank-branch').text('');
 			$('.intro').animateIn('fadeIn');
 			$('.options a').hide();
 		});
@@ -596,14 +601,6 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.switch input').change(function(){
-		if($(this).is(':checked')){
-			$(this).siblings('label').text('Ratings');
-		}
-		else{
-			$(this).siblings('label').text('Ranks');
-		}
-	});
 
 });
 

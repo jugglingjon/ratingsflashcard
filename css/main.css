@@ -39,6 +39,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
   font-size: 16px;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   color: white;
@@ -59,6 +60,20 @@ h1 {
 h2 {
   font-size: 36px;
 }
+h3 {
+  font-size: 24px;
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
 .eyebrow {
   font-size: 18px;
   margin-bottom: 5px;
@@ -78,6 +93,11 @@ h2 {
 .btn {
   font-size: 18px;
   padding: 12px 20px;
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    padding: 10px 16px;
+  }
 }
 .btn-primary {
   background: none;
@@ -114,6 +134,14 @@ h2 {
 .box {
   margin-top: 150px;
 }
+@media screen and (max-width: 767px) {
+  .box {
+    margin-top: 100px;
+  }
+  .box.intro {
+    margin-top: 30px;
+  }
+}
 .box .box-title {
   background-color: #1C1C1C;
 }
@@ -130,8 +158,22 @@ h2 {
 .intro .intro-box .box-content {
   padding: 30px 100px;
 }
+@media screen and (max-width: 767px) {
+  .intro .intro-box .box-content {
+    padding: 30px;
+  }
+}
 .intro .intro-box .box-content a {
   margin-bottom: 10px;
+}
+.version {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  font-size: 10px;
+  opacity: .4;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .nav {
   position: fixed;
@@ -154,6 +196,14 @@ h2 {
   opacity: .6;
   margin: 0 7px;
 }
+@media (max-width: 767px) {
+  .nav .progress-area {
+    font-size: 40px;
+  }
+  .nav .progress-area .progress-of {
+    font-size: 30px;
+  }
+}
 .nav .progress-area .progress-dots {
   line-height: 0px;
 }
@@ -168,6 +218,12 @@ h2 {
   -webkit-transition: 0.3s ease-out all;
   transition: 0.3s ease-out all;
 }
+@media screen and (max-width: 767px) {
+  .nav .progress-area .progress-dots span {
+    width: 8px;
+    height: 8px;
+  }
+}
 .nav .progress-area .progress-dots span.active {
   background: rgba(255, 255, 255, 0.8);
 }
@@ -179,12 +235,14 @@ h2 {
   opacity: .6;
   display: none;
 }
-.question .question-box {
-  margin-top: 50px;
-}
 .question .question-box .box-title {
   padding: 20px 40px;
   height: 104px;
+}
+@media screen and (max-width: 767px) {
+  .question .question-box .box-title {
+    height: auto;
+  }
 }
 .question .question-box .box-content {
   background: none;
@@ -209,6 +267,15 @@ h2 {
 }
 .question .question-box .box-content .options a:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .question .question-box .box-content .options a {
+    width: 47%;
+    margin-right: 6%;
+  }
+  .question .question-box .box-content .options a:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 .question .question-box .box-content .options img {
   max-height: 110px;
@@ -276,6 +343,12 @@ canvas {
 #complete .modal-dialog .modal-content .modal-header h1 {
   line-height: 1;
 }
+@media screen and (max-width: 767px) {
+  #response .modal-dialog .modal-content .modal-header h3,
+  #complete .modal-dialog .modal-content .modal-header h3 {
+    font-size: 28px;
+  }
+}
 #response .modal-dialog .modal-content .modal-body,
 #complete .modal-dialog .modal-content .modal-body {
   padding: 0;
@@ -307,6 +380,13 @@ canvas {
   max-height: 170px;
   display: block;
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .response-images div img,
+  .reference-detail-images div img {
+    max-width: 140px;
+    max-height: 140px;
+  }
 }
 .settings .btn-difficulty {
   display: block;
@@ -355,7 +435,6 @@ canvas {
 .scoreboard .settings-box .box-title,
 .settings .settings-box .box-title {
   padding: 20px 40px;
-  height: 104px;
 }
 .scoreboard .scoreboard-box .box-content,
 .settings .scoreboard-box .box-content,
@@ -363,6 +442,22 @@ canvas {
 .settings .settings-box .box-content {
   padding: 30px 40px;
   min-height: 264px;
+}
+@media screen and (max-width: 767px) {
+  .scoreboard .scoreboard-box .box-content .scoreboard-right,
+  .settings .scoreboard-box .box-content .scoreboard-right,
+  .scoreboard .settings-box .box-content .scoreboard-right,
+  .settings .settings-box .box-content .scoreboard-right {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .scoreboard .scoreboard-box .box-content,
+  .settings .scoreboard-box .box-content,
+  .scoreboard .settings-box .box-content,
+  .settings .settings-box .box-content {
+    padding: 30px 15px;
+  }
 }
 .scoreboard .scoreboard-box .box-content h1,
 .settings .scoreboard-box .box-content h1,
@@ -429,11 +524,27 @@ canvas {
   color: #FFD081;
   padding-left: 10px;
 }
+.reference {
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+@media screen and (max-width: 767px) {
+  .reference.filtering {
+    margin-top: 230px;
+  }
+}
 .reference .reference-field {
   padding: 20px;
   margin-top: 80px;
+  box-sizing: content-box;
+}
+@media screen and (max-width: 767px) {
+  .reference .reference-field {
+    padding: 0;
+  }
 }
 .reference .reference-field .reference-rank,
+.reference .reference-field .grid-sizer,
 .reference .reference-field .reference-rating {
   width: 218px;
   height: 200px;
@@ -444,7 +555,17 @@ canvas {
   background: rgba(39, 39, 39, 0.94);
   box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 767px) {
+  .reference .reference-field .reference-rank,
+  .reference .reference-field .grid-sizer,
+  .reference .reference-field .reference-rating {
+    width: 46%;
+    height: 170px;
+    margin: 2%;
+  }
+}
 .reference .reference-field .reference-rank .reference-rank-meta,
+.reference .reference-field .grid-sizer .reference-rank-meta,
 .reference .reference-field .reference-rating .reference-rank-meta {
   position: absolute;
   color: white;
@@ -452,6 +573,7 @@ canvas {
   font-size: 13px;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-branch,
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-branch,
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-branch {
   left: 10px;
   top: 10px;
@@ -460,32 +582,39 @@ canvas {
   opacity: 1;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Navy"],
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Navy"],
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Navy"] {
   background-color: #004070;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Marines"],
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Marines"],
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Marines"] {
   background-color: #BF2F38;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Air Force"],
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Air Force"],
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Air Force"] {
   background-color: #272A74;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Army"],
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Army"],
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-branch[data-branch-label="Army"] {
   background-color: #304D39;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-type,
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-type,
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-type {
   right: 10px;
   top: 10px;
   text-align: right;
 }
 .reference .reference-field .reference-rank .reference-rank-meta.reference-rank-meta-type .reference-rank-meta-grade,
+.reference .reference-field .grid-sizer .reference-rank-meta.reference-rank-meta-type .reference-rank-meta-grade,
 .reference .reference-field .reference-rating .reference-rank-meta.reference-rank-meta-type .reference-rank-meta-grade {
   opacity: .6;
 }
 .reference .reference-field .reference-rank img,
+.reference .reference-field .grid-sizer img,
 .reference .reference-field .reference-rating img {
   max-height: 110px;
   max-width: 110px;
@@ -496,11 +625,21 @@ canvas {
   margin-top: -7px;
   left: 50%;
 }
+@media screen and (max-width: 767px) {
+  .reference .reference-field .reference-rank img,
+  .reference .reference-field .grid-sizer img,
+  .reference .reference-field .reference-rating img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+}
 .reference .reference-field .reference-rank.reference-rating img,
+.reference .reference-field .grid-sizer.reference-rating img,
 .reference .reference-field .reference-rating.reference-rating img {
   max-width: 150px;
 }
 .reference .reference-field .reference-rank .reference-rank-title,
+.reference .reference-field .grid-sizer .reference-rank-title,
 .reference .reference-field .reference-rating .reference-rank-title {
   background: #1C1C1C;
   position: absolute;
@@ -518,11 +657,11 @@ canvas {
   -webkit-appearance: none;
   padding: 12px 30px 12px 20px;
   height: 51px;
-  top: 2px;
+  top: 4px;
   font-size: 18px;
   position: relative;
   margin-left: 10px;
-  width: 520px;
+  width: 230px;
 }
 .nav-reference .reference-filter {
   background: rgba(255, 255, 255, 0.9);
@@ -534,11 +673,11 @@ canvas {
   -webkit-appearance: none;
   padding: 12px 20px;
   height: 51px;
-  top: 2px;
+  top: 4px;
   font-size: 18px;
   position: relative;
   margin-left: 10px;
-  width: 345px;
+  width: 245px;
 }
 .nav-reference .select-arrow {
   display: inline-block;
@@ -550,6 +689,34 @@ canvas {
   bottom: 15px;
   position: absolute;
   right: 12px;
+}
+.nav-reference #filter-toggle {
+  display: none;
+}
+.nav-reference .filters {
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .nav-reference select,
+  .nav-reference .reference-filter,
+  .nav-reference .btn {
+    height: 44px;
+  }
+  .nav-reference #filter-toggle {
+    display: block;
+    float: right;
+  }
+  .nav-reference .filters {
+    display: none;
+    margin-top: 10px;
+  }
+  .nav-reference .filters select,
+  .nav-reference .filters .reference-filter,
+  .nav-reference .filters .select-arrow {
+    display: block;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
 }
 #reference-detail .modal-dialog {
   margin-top: 150px;
