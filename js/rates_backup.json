@@ -1,0 +1,235 @@
+[
+	{
+		"title":"Seaman Recruit",
+		"grade":"E-1",
+		"abbreviation":"SR",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Board",
+				"image": "SR.png",
+				"quiz":true,
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Seaman Apprentice",
+		"grade":"E-2",
+		"abbreviation":"SA",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Board",
+				"image": "SA-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Seaman",
+		"grade":"E-3",
+		"abbreviation":"SN",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "SN-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Petty Officer 3rd Class",
+		"grade":"E-4",
+		"abbreviation":"PO3",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "PO3-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Petty Officer 2nd Class",
+		"grade":"E-5",
+		"abbreviation":"PO2",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "PO2-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Petty Officer 1st Class",
+		"grade":"E-6",
+		"abbreviation":"PO1",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "PO1-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Chief Petty Officer",
+		"grade":"E-7",
+		"abbreviation":"CPO",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "CPO-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Senior Chief Petty Officer",
+		"grade":"E-8",
+		"abbreviation":"SCPO",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "SCPO-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+		
+	},
+	{
+		"title":"Master Chief Petty Officer",
+		"grade":"E-9",
+		"abbreviation":"MCPO",
+		"branch": "Navy",
+		"type": "Enlisted",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "MCPO-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Ensign",
+		"grade":"O-1",
+		"abbreviation":"ENS",
+		"branch": "Navy",
+		"type": "Officer",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "ENS.png",
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Lieutenant Junior Grade",
+		"grade":"O-2",
+		"abbreviation":"LTJG",
+		"branch": "Navy",
+		"type": "Officer",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "LTJG.png",
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Lieutenant",
+		"grade":"O-3",
+		"abbreviation":"LT",
+		"branch": "Navy",
+		"type": "Officer",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "LT.png",
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Lieutenant Commander",
+		"grade":"O-4",
+		"abbreviation":"LCDR",
+		"branch": "Navy",
+		"type": "Officer",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "LCDR.png",
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Commander",
+		"grade":"O-5",
+		"abbreviation":"CDR",
+		"branch": "Navy",
+		"type": "Officer",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "e1-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+	},
+	{
+		"title":"Captain",
+		"grade":"O-6",
+		"abbreviation":"CAPT",
+		"branch": "Navy",
+		"type": "Officer",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend consequat quam, porttitor mollis ex interdum sed. Curabitur at erat sed augue hendrerit accumsan nec ut leo. Aliquam faucibus vulputate consequat. Vestibulum suscipit ligula vel commodo porta.",
+		"insignia": [
+			{
+				"title":"Shoulder Badge",
+				"image": "e1-Shoulder-Badge.png",
+				"quiz":true
+			}
+		]
+	}
+]

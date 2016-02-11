@@ -25,618 +25,845 @@ Examples:
 .animation-delay(2s)
 
 */
+
 @import "elements.less";
-
-@navyblue: #123C72;
-@navyyellow: #E7D184;
+@import "fonts.css";
 
 
-//custom fonts (Marvel and Open Sans)
-@font-face {font-family: 'Marvel'; src: url('../fonts/marvel-italic-webfont.eot'); src: url('../fonts/marvel-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/marvel-italic-webfont.woff2') format('woff2'), url('../fonts/marvel-italic-webfont.woff') format('woff'), url('../fonts/marvel-italic-webfont.ttf') format('truetype'), url('../fonts/marvel-italic-webfont.svg#marvelitalic') format('svg'); font-weight: normal; font-style: italic; } @font-face {font-family: 'Marvel'; src: url('../fonts/marvel-regular-webfont.eot'); src: url('../fonts/marvel-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/marvel-regular-webfont.woff2') format('woff2'), url('../fonts/marvel-regular-webfont.woff') format('woff'), url('../fonts/marvel-regular-webfont.ttf') format('truetype'), url('../fonts/marvel-regular-webfont.svg#marvelregular') format('svg'); font-weight: normal; font-style: normal; } @font-face {font-family: 'Open Sans'; src: url('../fonts/opensans-bold-webfont.eot'); src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff'), url('../fonts/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg'); font-weight: bold; font-style: normal; } @font-face {font-family: 'Open Sans'; src: url('../fonts/opensans-regular-webfont.eot'); src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg'); font-weight: normal; font-style: normal;
+@titlebarcolor:#1C1C1C;
+@contentbarcolor:#272727;
+@popcolor:#FFD081;
+
+// ====================================
+// 				Common
+// ====================================
+
+.container{max-width: 970px !important;}
+
+body{
+	background-image: url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-size: 16px;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	color: white;
 }
 
-// ====================================
-// 				Card flipping
-// ====================================
+a{
+	&:hover{
+		text-decoration:none;
+	}
+}
 
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000;
-	-webkit-perspective: 1000;
+h1,h2,h3{
+	font-family: 'Coda', helvetica, arial, sans-serif;
+	color: @popcolor;
+	margin:0;
+}
+
+h1{
+	font-size: 57px;
+}
+
+h2{
+	font-size: 36px;
+}
+
+.eyebrow{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.text-correct{
+	color:green;
+}
+
+.text-incorrect{
+	color: red;
+}
+
+.graytitlebox{
+	background-color: @titlebarcolor;
+}
+.graysemibox{
+	background-color: fade(@contentbarcolor,90%);
+}
+
+.btn{
+	font-size: 18px;
+	padding: 12px 20px;
+}
+
+.btn-primary{
+	background:none;
+	border: 1px solid @popcolor;
+	border-radius: 3px;
+	color: @popcolor;
+
+	&:active,&:hover,&:focus{
+		background: fade(@popcolor,10%);
+		border-color: @popcolor;
+	}
+}
+
+.btn-secondary{
+	background:none;
+	border: 1px solid white;
+	border-radius: 3px;
+	color: white;
+	transition:.3s ease-out background-color;
+
+	&:active,&:hover,&:focus{
+		background: fade(#fff,10%);
+		border-color: #fff;
+		color:white;
+	}
+}
+
+.scrolled .nav {
+	select,.btn-secondary,label{
 	
-	transition: .6s ease-out all;
+		background-color:rgba(0,0,0,.3);
+	}
 }
-	/* flip the pane when hovered */
-	.flip-container.hover .flipper {
-		transform: rotateX(180deg);
+
+// ====================================
+// 				Intro
+// ====================================
+
+.box{
+	margin-top: 150px;
+	.box-title{
+		.graytitlebox;
+
+		.question-text{
+			transition: .3s ease-out opacity;
+		}
+	}
+
+	.box-content{
+		.graysemibox;
+	}
+}
+
+.intro{
+	.intro-box{
+		.box-title{
+			padding: 20px 40px;
+		}
+
+		.box-content{
+			
+			padding: 30px 100px;
+			a{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+// ====================================
+// 				Question
+// ====================================
+
+.nav{
+	position: fixed;
+	height: 133px;
+	padding-top: 20px;
+	background-image: linear-gradient(-180deg, #A1AAB1 0%, rgba(161, 170, 177, 0) 100%);	top: 0;
+	left:0;
+	right: 0;
+	z-index:999;
+
+	.progress-area{
+		font-size: 50px;
+		font-family: 'Coda', arial;
+		line-height: 44px;
+
+		.progress-of{
+			font-size:40px;
+			opacity: .6;
+			margin: 0 7px;
+		}
+
+		.progress-dots{
+			line-height: 0px;
+			
+			span {
+				border: 1px solid #FFF;
+				background: none;
+				height: 10px;
+				width: 10px;
+				display: inline-block;
+				border-radius: 50%;
+				margin: 0 3px;
+				transition: .3s ease-out all;
+
+				&.active {
+					background: rgba(255,255,255,.8);
+				}
+			}
+		}
+	}
+
+	.score{
+		.score-current, .score-new{
+			color:white;
+		}
+
+		.score-new{
+			opacity: .6;
+			display:none;
+		}
+	}
+	
+}
+
+.question{
+	.question-box{
+		margin-top: 50px;
+
+		.box-title{
+			padding: 20px 40px;
+			height: 104px;
+		}
+
+		.box-content{
+			background: none;
+			padding: 20px 0 30px 0px;
+			height: 264px;
+			a{
+				margin-bottom: 10px;
+			}
+
+			.options{
+
+					text-align:left;
+
+				a{
+					display:inline-block;
+					width: 179px;
+					height: 179px;
+					position: relative;
+					text-align: center;
+					margin-right: 20px;
+					background: rgba(39,39,39,0.94);
+					box-shadow: 0px 0px 11px 4px rgba(0,0,0,0.50);
+
+					&:last-child{
+						margin-right:0;
+					}
+				}
+
+				img {
+					max-height: 110px;
+					max-width: 110px;
+					top: 50%;
+					position: absolute;
+					transform: translate(-50%, -50%);
+					margin-top: -7px;
+					left: 50%;
+				}
+			}
+		}
+	}
+}
+
+
+
+// ====================================
+// 				Timer
+// ====================================
+
+#dial{
+  display:none;
+}
+
+canvas{
+	display: inline-block !important;
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color:@titlebarcolor;
+	padding: 3px;
+    border-radius: 50%;
+}
+
+
+// ====================================
+// 				Response
+// ====================================
+
+.modal-backdrop{
+	background: rgba(28,28,28,0.96);
+	&.in{
+		opacity:1;
+	}
+}
+
+#response, #complete{
+	.modal-dialog{
+		margin-top:100px;
+	
+		.modal-content{
+			background-color: transparent;
+			box-shadow: none;
+			border:0;
+
+			.modal-header,.modal-footer{
+				border:0;
+			}
+
+			.modal-header{
+				.eyebrow{
+					font-size: 22px;
+				}
+
+				.underbrow{
+					.eyebrow;
+				}
+				
+				h3{
+					font-size: 42px;
+				}
+
+				h2{
+					margin-bottom: 20px;
+				}
+
+				h1{
+					line-height: 1;
+				}
+
+			}
+		
+			.modal-body{
+
+				padding:0;
+
+				
+			}
+
+			.modal-footer{
+				text-align: center;
+				padding:0;
+			}
+
+		}
+	}
+}
+
+.response-images, .reference-detail-images{
+
+	div{
+		display:inline-block;
+		vertical-align:middle;
+		margin: 10px;
+
+		.insignia-tag{
+			padding: 8px;
+			border-radius: 4px;
+			background-color: #484848;
+			color: #000;
+			margin-top: 10px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+
+		img{
+			max-width: 170px;
+			max-height: 170px;
+			display:block;
+			margin: 0 auto;
+		}
+	}
+
+}
+
+
+
+// ====================================
+// 				settings
+// ====================================
+
+.settings{
+	.btn-difficulty{
+
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+		font-size: 28px;
+
+		span.btn-sub{
+			font-size: 14px;
+			color: #FFF;
+			display: block;
+		}
+		
+		.btn-sub-enabled{
+			display:block !important;
+		}
+
+		.btn-sub-disabled{
+			display:none !important;
+		}
+
+		&.setDifficulty{
+			color:white;
+			border-color:white;
+		}
+
+		&.disabledDifficulty{
+			opacity: .3;
+
+			&:active,&:focus{
+				border-color:@popcolor;
+				background:none;
+				color:@popcolor;
+			}
+
+			.btn-sub-enabled{
+				display:none !important;
+			}
+
+			.btn-sub-disabled{
+				display:block !important;
+			}
+		}
+
+		
+	}
+}
+
+
+
+
+// ====================================
+// 				scoreboard
+// ====================================
+
+.scoreboard, .settings{
+	.scoreboard-box, .settings-box{
+		margin-top: 0px;
+
+		.box-title{
+			padding: 20px 40px;
+			height: 104px;
+		}
+
+		.box-content{
+			
+			padding: 30px 40px;
+			min-height: 264px;
+
+			h1{
+				font-size: 88px;
+			}
+
+			h3{
+				margin-bottom: 10px;
+			}
+
+			span{
+				display: block;
+			}
+			
+			table{
+				width: 100%;
+				tr{
+					height: 30px;
+					border-bottom: 2px solid @contentbarcolor;
+
+					&:last-child{
+						border:0;
+					}
+				}
+
+				th,td{
+					padding:8px;
+					font-size: 18px;
+				}
+
+				th{
+					background-color: @popcolor;
+					text-align: center;
+					color: black;
+					width: 30px;
+				}
+
+				td{
+					background-color: fade(@popcolor,20%);
+					color: @popcolor;
+					padding-left:10px;
+				}
+			}
+
+		}
+	}
+}
+
+
+// ====================================
+// 				Reference
+// ====================================
+
+.reference{
+	.reference-field{
+		padding: 20px;
+		margin-top: 80px;
+		//width:1024px;
+		
+		.reference-rank, .reference-rating {
+			width: 218px;
+			height: 200px;
+			position: relative;
+			float: left;
+			text-align: center;
+			margin: 14px;
+			background: rgba(39,39,39,0.94);
+			box-shadow: 0px 0px 11px 4px rgba(0,0,0,0.50);
+			
+			.reference-rank-meta {
+				position:  absolute;
+				color: white;
+				text-transform: uppercase;
+				font-size: 13px;
+
+				&.reference-rank-meta-branch {
+					left: 10px;
+					top: 10px;
+					padding: 3px 6px;
+					border-radius: 3px;
+					opacity: 1;
+
+					&[data-branch-label="Navy"]{
+						background-color:#004070;
+					}
+
+					&[data-branch-label="Marines"]{
+						background-color:#BF2F38;
+					}
+
+					&[data-branch-label="Air Force"]{
+						background-color:#272A74;
+					}
+
+					&[data-branch-label="Army"]{
+						background-color:#304D39;
+					}
+				}
+
+				&.reference-rank-meta-type {
+					right: 10px;
+					top: 10px;
+					text-align: right; 
+
+					.reference-rank-meta-grade {
+						opacity: .6;
+					}
+				}
+
+				
+			}
+
+			
+
+			img{
+				max-height: 110px;
+				max-width: 110px;
+				top: 50%;
+				position: absolute;
+				transform: translate(-50%,-50%);
+				margin-top: -7px;
+				left: 50%;
+			}
+
+			&.reference-rating img{
+				max-width: 150px;
+			}
+
+			.reference-rank-title{
+				background: #1C1C1C;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 4px;
+				color: @popcolor;
+			}
+		}
+	}
+}
+
+.nav-reference{
+	select{
+		background: rgba(0, 0, 0, 0);
+		border: 1px solid #FFF;
+		line-height: 1;
+		border-radius: 3px;
+		-webkit-appearance: none;
+		padding: 12px 30px 12px 20px;
+		height: 51px;
+		top: 2px;
+		font-size: 18px;
+		position: relative;
+		margin-left: 10px;
+		width: 520px;
 		
 	}
 
-.flip-container, .front, .back {
-	width: 700px;
-	height: 450px;
+	.reference-filter{
+		background: rgba(255, 255, 255, .9);
+		color: #3A89B9;
+		font-style: italic;
+		border: 1px solid #FFF;
+		line-height: 1;
+		border-radius: 3px;
+		-webkit-appearance: none;
+		padding: 12px 20px;
+		height: 51px;
+		top: 2px;
+		font-size: 18px;
+		position: relative;
+		margin-left: 10px;
+		width: 345px;
+	}
+
+	.select-arrow
+	{
+		display: inline-block;
+		position: relative;
+		transition:.3s ease-out background-color;
+
+		&::before{
+			bottom: 15px;
+			position: absolute;
+			right: 12px;
+		}
+	}
+}
+
+#reference-detail{
+
+	.modal-dialog{
+		margin-top:150px;
+	}
+
+	.modal-content{
+
+		.modal-close {
+			color: rgba(255,255,255,.8);
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			font-size: 28px;
+		}
+
+		background-color: #282828;
+		
+		.modal-body{
+			.reference-detail-image{
+				display: inline-block;
+			}
+			.reference-detail-meta{
+				margin-top: 10px;
+				text-align:left;
+				span{
+					margin-right: 20px;
+				}
+			}
+			h3{
+				margin-top: 4px;
+				font-size: 30px;
+			}
+		}
+		.modal-footer{
+			background-color: #1C1C1C;
+			border:0;
+			text-align:left;
+			margin:0;
+
+			.reference-detail-meta{
+				margin-top: 0px;
+				text-align:left;
+				span{
+					margin-right: 20px;
+				}
+
+
+			}
+			h3{
+				margin-top: 10px;
+				font-size: 30px;
+			}
+
+			.reference-detail-description{
+				margin-top: 20px;
+				color: #c5c5c5;
+			}
+		}
+	}
+
+}
+
+
+// ====================================
+// 			Loading Wheel
+// ====================================
+
+// scaling... any units
+@width: 100px;
+@white: #ffffff;
+
+body {
+	background-color: black;
+	width: 100%;
+}
+
+html{
+	width: 100%;
+}
+// demo-specific
+
+
+// end demo-specific
+
+.loader {
+	position: fixed;
+	display:none;
+	width: @width;
+	&:before {
+		content:'';
+		display: block;
+		padding-top: 100%;
+	}
+	left:50%;
+	top: 50%;
+	margin-left: -@width/2;
+	margin-top: -@width/2;
+}
+
+.circular {
+	animation: rotate 2s linear infinite;
+	height: 100%;
+	transform-origin: center center;
+	width: 100%;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
 	margin: auto;
 }
 
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	transform-origin: 100% 225px; /* half of height */
+
+.path {
+	stroke-dasharray: 1,200;
+	stroke-dashoffset: 0;
+	animation: 
+	dash 1.5s ease-in-out infinite,
+	color 6s ease-in-out infinite
+	;
+	stroke-linecap: round;
+}
+
+@keyframes rotate{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes dash{
+	0%{
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+	}
+	50%{
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35;
+	}
+	100%{
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -124;
+	}
+}
+@keyframes color{
+	100%, 0%{
+		stroke: @white;
+	}
+	40%{
+		stroke: @white;
+	}
+	66%{
+		stroke: @white;
+	}
+	80%, 90%{
+		stroke: @white;
+	}
+}
+
+// ====================================
+// 			Toggle Switches
+// ====================================
+
+.switch {
+	display: inline-block;
+	height: 51px;
 	position: relative;
-}
+	vertical-align: bottom;
+	margin-left: 10px;
 
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
 
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateX(0deg);
-	box-shadow: 3px 3px 18px 2px rgba(0, 0, 0, 0.15);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateX(180deg);
-	box-shadow: 3px 3px 18px 2px rgba(0, 0, 0, 0.15);
-}
-
-
-
-.animated {
-	animation-duration: .4s;
-	animation-timing-function: ease-out;
-}
-
-.cardOutLeft{
-	animation-name: cardOutLeft;
-}
-
-@keyframes cardOutLeft {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-		-webkit-transform: translate3d(-100%, 0, 0) rotate(-15deg);
-		transform: translate3d(-100%, 0, 0)  rotate(-15deg);
-	}
-}
-
-
-.cardOutRight{
-	animation-name: cardOutRight;
-}
-
-@keyframes cardOutRight {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-		-webkit-transform: translate3d(100%, 0, 0) rotate(15deg);
-		transform: translate3d(100%, 0, 0)  rotate(15deg);
-	}
-}
-
-.cardInLeft{
-	animation-name: cardInLeft;
-}
-
-@keyframes cardInLeft {
-	0% {
-		opacity: 0;
-		-webkit-transform: translate3d(100%, 0, 0) rotate(15deg);
-		transform: translate3d(100%, 0, 0)  rotate(15deg);
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0) rotate(0deg);
-		transform: translate3d(0)  rotate(0deg);
-	}
-}
-
-.cardInRight{
-	animation-name: cardInRight;
-}
-
-@keyframes cardInRight {
-	0% {
-		opacity: 0;
-		-webkit-transform: translate3d(-100%, 0, 0) rotate(-15deg);
-		transform: translate3d(-100%, 0, 0)  rotate(-15deg);
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0) rotate(0deg);
-		transform: translate3d(0)  rotate(0deg);
-	}
-}
-
-
-
-
-
-// ====================================
-// 				General
-// ====================================
-
-
-body{
-	background: url('../img/leather-background.png');
-	font-family: 'Open Sans',arial,sans-serif;
-}
-
-body,html{
-	overflow:hidden;
-	height: 100%;
-}
-
-h1,h2,h3,h4{
-	font-family: 'Marvel', sans-serif;
-	text-transform: uppercase;
-}
-
-
-
-.btn{
-	box-shadow: 0 5px 0 0 darken(@navyyellow,25%);
-    position: relative;
-    top: -5px;
-    transition: .3s ease-out all;
-    background-color: @navyyellow;
-    border:0;
-    color:darken(@navyyellow,55%);
-    font-size:1.3em;
-	padding:12px 20px;
-
-	&:active{
-		box-shadow: 0 0 0 0 darken(@navyyellow,25%);
-		background-color:darken(@navyyellow,25%);
-    	top: 0;
-	}
-}
-
-.btn-warning{
-	@warningColor:gray;
-	box-shadow: 0 5px 0 0 @warningColor;
-	background-color: white;
-	border: 1px solid @warningColor;
-	color: red;
-
-	&:active{
-		box-shadow: 0 0 0 0 @warningColor;
-		background-color:@warningColor;
-		color:white;
-    	top: 0;
-	}
-}
-
-	
-
-// ====================================
-// 				Structural
-// ====================================
-
-.top-bar{
-	background-color: #123C72;
-    border-bottom: 8px solid #E7D184;
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.4);
-    min-height: 120px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding-top: 56px;
-
-    .nav a {
-	    color: #FFF;
-	    text-decoration: none;
-	    font-family: 'Marvel', 'Open Sans', arial, sans-serif;
-	    text-transform: uppercase;
-	    display: inline-block;
-	    padding: 6px 12px;
-	    font-size: 2em;
-	}
-}
-
-.content-bar{
-	margin-top: 150px;
-}
-
-
-// ====================================
-// 				Cards
-// ====================================
-
-.flipper{
-	margin:0 auto;
-	box-shadow: 3px 3px 12px 0 rgba(0,0,0,.4);
-	z-index:9;
-
-	&>div{
-		background-size:cover;
-		background-position: center;
-	}
-	.front{
-		.question-box{
-			background-color:RGBA(18, 60, 114, .9);
-			position: absolute;
-			bottom:0;
-			right: 0;
-			left:0;
-			padding: 20px;
-			text-align: center;
-			color:white;
-		}
-	}
-	.back{
-		padding: 120px 80px 20px 80px;
-		p{
-			color:white;
-			text-align: center;
-			font-size: 1.4em;
-			
-			&.back-question{
-				font-style:italic;
-				margin-bottom: 20px;
-			}
-		}
-		&::after{
-			content:'';
-			position:absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: rgba(51, 51, 51, 0.85);
-			z-index: -1;
-		}
-	}
-}
-
-
-.btn-navigation {
-    position: fixed;
-    top: 50%;
-    margin-top: -30px;
-    width: 70px;
-    height: 80px;
-    background-color: rgba(0,0,0,.3);
-    transition: .3s ease-out all;
-    text-align: center;
-    line-height: 80px;
-    z-index: 10;
-
-    &:active{
-		background-color: rgba(0,0,0,.8);
-    }
-
-    span {
-	    color: #FFF;
-	    font-size: 30px;
-	    line-height: 80px;
-	}
-
-	&.btn-navigation-prev{
-		left:0;
-	}
-
-	&.btn-navigation-next{
-		right:0;
-	}
-}
-
-.btn-difficulty{
-	box-shadow: 0 5px 0 0 lighten(#123C72,15%);
-    position: relative;
-    top: -5px;
-    transition: .3s ease-out all;
-    background-color: #3276B1;
-    border:0;
-    color:white;
-
-	&.difficulty-marked{
-		box-shadow: 0 0 0 0 lighten(#123C72,15%);
-		background-color:#123C72;
-    	top: 0;
-	}
-}
-
-.btn-default{
-	box-shadow: 0 5px 0 0 darken(@navyyellow,25%);
-    position: relative;
-    top: -5px;
-    transition: .3s ease-out all;
-    background-color: @navyyellow;
-    border:0;
-    color:darken(@navyyellow,55%);
-    font-size:1.3em;
-
-	&:active{
-		box-shadow: 0 0 0 0 darken(@navyyellow,25%);
-		background-color:darken(@navyyellow,25%);
-    	top: 0;
-	}
-}
-
-.top-bar{
-	.nav{
-		a{
-			color:white;
-			text-decoration: none;
-			font-family: 'Marvel', 'Open Sans', arial, sans-serif;
-			text-transform:uppercase;
-		}
-	}
-
-	#typeSelect{
-		width: auto;
-		display: inline-block;
-		bottom: -3px;
-		position: relative;
-		margin-right: 18px;
-	}
-}
-
-// ====================================
-// 				Modals
-// ====================================
-
-.modal{
-
-	.modal-dialog{
-		margin-top: 100px;
-	}
-
-	.modal-header{
-		background-color: @navyblue;
-		color:white;
-
-		h4{
-			font-size:1.6em;
-		}
-
-		.close{
-			color:white;
-			text-shadow:none;
-			opacity: 1;
-			font-size: 36px;
-			padding: 1px 10px;
-		}
-	}
-	.modal-content{
-		border-radius:0;
-	}
-}
-
-#infoModal{
-	.modal-content{
-		background-color: @navyblue;
-		background-image: url('../img/logo-background.png');
-		background-repeat: no-repeat;
-		background-position: center center;
-		color:white;
-		padding: 40px 40px;
-
-		h1{
-			margin:0;
-		}
-
-
-		h2{
-			font-family:'Open Sans',sans-serif;
-			font-size:1em;
-			margin-top: 4px;
-		}
-	}
-	.modal-footer{
-		border:0;
-		padding:0;
-	}
-
-	.version{
-		font-size: .8em;
-		opacity: .6;
-		display:block;
-		margin-top: 16px;
-	}
-}
-
-.stat-table{
-	width: 70%;
-    margin: 0 auto;
-}
-
-
-.top-bar {
-	.nav a {
-		display: block;
-	}
-}
-
-.navbar-toggle {
-	margin-top: 3px;
-}
-
-.nav .navbar-nav {
-	li a {
-		color: #fff;
-		&:hover, &:focus {
-			color: #fff;
-		}
-	}
-}
-
-.navbar-default {
-	.navbar-collapse, .navbar-form {
-	    border: none;
-	    box-shadow: none;
-	}
-	.navbar-collapse {
-	    padding-left: 5px;
-	}
-}
-
-.text-container {
-	margin-top: 450px;
-}
-
-
-
-
-.flip-container {
-	height: auto;
-    margin: auto;
-    width: auto;
-    max-width: 700px;
-    //min-width: 100%;
-
-	.front {
-	    height: 420px;
-	    margin: auto;
-	    width: auto;
-	    max-width: 700px;
-	    min-width: 100%;
-	}
-
-	.back {
-	    margin: auto;
-	    height: 420px;
-	    width: auto;
-	    max-width: 700px;
-	    min-width: 100%;
-	}
-
-	&.hover {
-		.flipper {
-			transform: rotateX(180deg);
-    		transform-origin: 100% 210px 0;
-		}
-	}
-
-	.fullscreen-img {
-		.front-clip {
-				height: 420px;
-				width: auto;
-			img {
-				height: 100%;
-			    margin: auto;
-			    width: 100%;
-			    max-width: 700px;
-			    min-width: 100%;
-			    object-fit: cover;
-			    -o-object-fit: cover;
-			    position: absolute;
-			}
-		}
-	}
-}
-
-
-
-@media only screen and (max-width : 480px) {
-	.modal-content {
+	.cmn-toggle {
 		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		margin-left: -9999px;
+		visibility: hidden;
+	}
+	.cmn-toggle + label {
+		display: block;
+		position: relative;
+		cursor: pointer;
+		outline: none;
+		user-select: none;
 	}
 
-	.modal {
-		.modal-dialog {
-			margin: 0;
-			height: 100%;
-		}
+	input.cmn-toggle-round-flat + label {
+		width: 120px;
+		height: 51px;
+		transition: .4s ease-out all;
+		padding: 0 16px;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 51px;
+		padding-left:37px;
 	}
-}
-
-@media only screen and (max-width : 768px) {
- 	.top-bar {
- 		padding-top: 35px;
- 	}
-
-	.navbar-collapse {
-		width: 100%;
+	input.cmn-toggle-round-flat + label:before,
+	input.cmn-toggle-round-flat + label:after {
+		display: block;
+		position: absolute;
+		content: "";
 	}
-}
-
-
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-	.top-bar {
-		padding-top: 25px;
-	    min-height: 90px;
+	input.cmn-toggle-round-flat + label:before {
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		border: 1px solid white;
+		border-radius: 3px;
+		transition: background 0.4s;
 	}
-
-	.flip-container {
-		.back {
-			padding-top: 50px;
-			height: 320px;
-
-			p {
-				font-size: 1.2em;
-			}
-		}
+	input.cmn-toggle-round-flat + label:after {
+		top: 4px;
+		left: 4px;
+		bottom: 4px;
+		width: 25px;
+		background-color: #fff;
+		border-radius: 3px;
+		transition: margin 0.4s, background 0.4s;
 	}
-
-	.btn-navigation {
-		top: 35%;
-		width: 55px;
+	input.cmn-toggle-round-flat:checked + label {
+		padding-left:14px;
 	}
+	input.cmn-toggle-round-flat:checked + label:after {
+		margin-left: 87px;
 
-	.text-container {
-		margin-top: 360px;
-	}
-
-	.front, .front-clip {
-		height: 320px !important;
-	}
-
-	#typeSelect {
-		width: 220px !important;
-		white-space: normal;
-		word-wrap: break-word;
-		overflow: visible;
-	}
-
-	.flipper {
-		&.back::after,
-		& > div {
-		    height: 320px;
-		}
-	}
-
-	.flip-container.hover .flipper {
-	    transform: rotateX(180deg);
-	    transform-origin: 100% 160px 0;
 	}
 }
-
-
-@media only screen and (min-width : 992px) {
-	.flip-container, .front, .back {
-	    //min-width: auto;
-	    //width: 100%;
-	}
-
-	.front-clip {
-	    width: 700px;
-	    height: 470px;
-	}
-}
-
-	
