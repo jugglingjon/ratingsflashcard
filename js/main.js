@@ -49,10 +49,6 @@ function setDifficulty(dif, dmax){
 	$('.btn-difficulty[data-set-difficulty="'+difficulty+'"]').addClass('setDifficulty');
 	$('.btn-difficulty[data-set-difficulty="'+maxDifficulty+'"]').nextAll().addClass('disabledDifficulty');
 
-
-	var optionPadding=(3-difficulty)*100;
-	$('.question .question-box .box-content .options').css('padding-left',optionPadding+'px');
-
 	//define subset of ranks and score multiplier based on difficulty setting
 	scoreMultiplier=dif;
 
